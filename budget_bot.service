@@ -1,0 +1,15 @@
+[Unit]
+Description=Budget Tracker Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+User=YOUR_USERNAME
+WorkingDirectory=/home/YOUR_USERNAME/budget_bot
+Environment="PATH=/home/YOUR_USERNAME/budget_bot/venv/bin"
+ExecStart=/home/YOUR_USERNAME/budget_bot/venv/bin/python main.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
